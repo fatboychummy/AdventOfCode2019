@@ -14,7 +14,7 @@ fs.delete(file)
 print("Running Day " .. day .. " part " .. part)
 
 local start = os.time()
-io.open(file, 'w'):write(tostring(runner("Day" .. day .. "/"))):close()
+io.open(file, 'w'):write(tostring(runner("Day" .. day .. "/") or "No output")):close()
 local elapsed = (os.time() - start) * 50
 
 print("Finished in " .. tostring(elapsed) .. " seconds.")
